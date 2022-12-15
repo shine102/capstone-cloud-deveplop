@@ -1,0 +1,11 @@
+sharing photo center
+- user:
+    + login
+    + register
+    + logout
+    + profile
+- photo:
+    + upload
+    + delete
+    + show
+    + dashboard
