@@ -13,7 +13,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
   await sequelize.addModels(V0_USER_MODELS);
 
   console.debug("Initialize database connection...");
-  await sequelize.sync();
+  await sequelize.sync({force: true});
 
   const app = express();
   const port = process.env.PORT || 8080;
@@ -29,7 +29,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
       'Content-Type', 'Accept',
       'X-Access-Token', 'Authorization',
     ],
-    methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+    methods: '*',
     preflightContinue: true,
     origin: '*',
   }));
