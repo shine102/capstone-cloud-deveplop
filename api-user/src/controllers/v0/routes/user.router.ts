@@ -7,6 +7,10 @@ const router: Router = Router();
 
 router.use('/auth', AuthRouter);
 
-router.get('/');
+router.get('/profile', (req: Request, res: Response) => {
+    res.send('profile');
+});
+
+
 
 export const UserRouter: Router = router;
