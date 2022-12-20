@@ -95,6 +95,10 @@ router.post('/register', async (req: Request, res: Response) => {
   res.status(201).send({auth: true, token: jwt, user: savedUser.short()});
 });
 
+router.get('/logout', (req: Request, res: Response) => {
+  res.status(200).send({auth: false, token: null});
+});
+
 
 
 

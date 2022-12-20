@@ -16,7 +16,7 @@ import {V0_PHOTO_MODELS} from './controllers/v0/model.index';
   await sequelize.sync({force: true});
 
   const app = express();
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 8100;
 
   app.use(bodyParser.json());
 
@@ -38,7 +38,7 @@ import {V0_PHOTO_MODELS} from './controllers/v0/model.index';
 
   // Root URI call
   app.get( '/', async ( req, res ) => {
-    res.send( '/api/v0/' );
+    res.send( 'go to /api/v0/ bruh' );
   } );
 
 

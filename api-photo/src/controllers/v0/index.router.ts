@@ -6,7 +6,7 @@ const router: Router = Router();
 router.use('/photo', PhotoRouter);
 
 router.get('/', async (req: Request, res: Response) => {
-  res.send(`V0`);
+  res.send(`go to api/v0/photo bruh`);
 });
 
 export const IndexRouter: Router = router;

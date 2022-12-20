@@ -1,9 +1,9 @@
 import {Router, Request, Response} from 'express';
-import {UserRouter} from './routes/user.router';
+import {AuthRouter} from './routes/auth.router';
 
 const router: Router = Router();
 
-router.use('/users', UserRouter);
+router.use('/user', AuthRouter);
 
 router.get('/', async (req: Request, res: Response) => {
   res.send(`V0`);
