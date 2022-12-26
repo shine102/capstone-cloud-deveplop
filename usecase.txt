@@ -1,9 +1,0 @@
-sharing photo center
-- user:
-    + login         /user/login   - post
-    + register      /user/register     - post
-    + logout       /user/logout
-- photo:
-    + upload      /photo - post
-    + dashboard    /photo/
-    + single photo /photo/:id
