@@ -14,7 +14,7 @@ on:
 
 jobs:
   docker:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       -
         name: Login to Docker Hub
