@@ -55,4 +55,4 @@ jobs:
         with:
           context: udagram-reverse-proxy
           push: true
-          tags: shine102/udagram-reverse-proxy:v1
+          tags: shine102/udagram-reverseproxy:v1
