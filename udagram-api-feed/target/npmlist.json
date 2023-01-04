@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "name": "udagram-api",
+  "dependencies": {
+    "@types/bcrypt": { "version": "3.0.1" },
+    "@types/jsonwebtoken": { "version": "8.5.9" },
+    "aws-sdk": { "version": "2.1282.0" },
+    "bcrypt": { "version": "5.1.0" },
+    "body-parser": { "version": "1.20.1" },
+    "cors": { "version": "2.8.5" },
+    "email-validator": { "version": "2.0.4" },
+    "express": { "version": "4.18.2" },
+    "jsonwebtoken": { "version": "9.0.0" },
+    "pg": { "version": "8.8.0" },
+    "sequelize-typescript": { "version": "0.6.11" },
+    "sequelize": { "version": "5.22.5" }
+  }
+}
