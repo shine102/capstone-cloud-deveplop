@@ -6,8 +6,8 @@ metadata:
     app: udagram-api-user
 spec:
   ports:
-  - name: "8100"
-    port: 8100
-    targetPort: 8100
+  - name: "8080"
+    port: 8080
+    targetPort: 8080
   selector:
     app: udagram-api-user
