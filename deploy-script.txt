@@ -1,7 +1,11 @@
+aws eks update-kubeconfig --region ap-southeast-1 --name cap-shine
+
 kubectl apply -f aws-secret.yaml
 kubectl apply -f env-configmap.yaml
 kubectl apply -f .\udagram-api-feed-deployment.yaml
 kubectl apply -f .\udagram-api-feed-service.yaml
+kubectl apply -f .\udagram-api-feed-v2-deployment.yaml
+kubectl apply -f .\udagram-api-feed-v2-service.yaml
 kubectl apply -f .\udagram-api-user-deployment.yaml
 kubectl apply -f .\udagram-api-user-service.yaml
 kubectl apply -f .\udagram-frontend-deployment.yaml
