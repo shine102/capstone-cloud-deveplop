@@ -7,6 +7,7 @@ const fs = require('fs')
 
 const app = startServer();
 
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ndXllbm5nb3R1bmdsYW1AZ21haWwuY29tIiwiaWF0IjoxNjcyODE3MjgwfQ.30XPEAsfwJBxTw135RvjparneD1UtwMu853rL4GIcf8"
 
 beforeAll(async () => {
   console.log("Jest starting!");
