@@ -34,7 +34,7 @@ jobs:
         with:
           context: udagram-api-feed
           push: true
-          tags: shine102/udagram-api-feed:v1
+          tags: shine102/udagram-api-feed:v2
       - 
         name: Build and push api-user
         uses: docker/build-push-action@v2

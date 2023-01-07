@@ -1,4 +1,5 @@
 aws eks update-kubeconfig --region ap-southeast-1 --name cap-shine
+aws cloudformation create-stack --stack-name test1 --template-body file://cloudformation.json --profile serverless
 
 kubectl apply -f aws-secret.yaml
 kubectl apply -f env-configmap.yaml
