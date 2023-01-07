@@ -27,7 +27,7 @@ describe("Test get all feed items", () => {
   test("200 - feeds", () => {
     const expectedStatusCode = 200;
     const expectedResponse = {
-      count: 1,
+      count: 0,
       rows: [] as string[],
     };
     return request(app)

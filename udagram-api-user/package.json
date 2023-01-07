@@ -10,7 +10,7 @@
     "prod": "ts-node-dev --respawn --transpile-only ./src/app.ts",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
-    "test": " jest --detectOpenHandles --verbose --forceExit"
+    "test": " jest --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",

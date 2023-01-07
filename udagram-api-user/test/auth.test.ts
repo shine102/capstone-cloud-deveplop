@@ -19,6 +19,24 @@ describe("Test verification", () => {
   });
 });
 
+describe("test register", () => {
+	test("should return 200 OK", () => {
+		const expectedStatusCode = 201;
+
+		return request(app)
+					.post("/api/v0/users/auth/")
+					.send({
+						email: "nguyenngotunglam@gmail.com",
+						password: "abc123"
+					})
+					.expect(expectedStatusCode)
+					.then((response) => {
+						expect(response.body.user.email).toStrictEqual("nguyenngotunglam@gmail.com")}
+					)
+	})
+});
+
+
 describe("Test login", () => {
 	test("should return auth: true", () => {
 		const expectedStatusCode = 200;
@@ -32,22 +50,5 @@ describe("Test login", () => {
 					.expect(expectedStatusCode)
 					.then((response) => {
 						expect(response.body.auth === true)})
-	})
-});
-
-describe("test register", () => {
-	test("should return 200 OK", () => {
-		const expectedStatusCode = 201;
-
-		return request(app)
-					.post("/api/v0/users/auth/")
-					.send({
-						email: "abc@test.com",
-						password: "abc123"
-					})
-					.expect(expectedStatusCode)
-					.then((response) => {
-						expect(response.body.user.email).toStrictEqual("abc@test.com")}
-					)
 	})
 });
