@@ -11,3 +11,8 @@ kubectl apply -f .\udagram-reverseproxy-service.yaml
 
 kubectl expose deployment udagram-frontend --type=LoadBalancer --name=publicfrontend --port 80
 kubectl expose deployment udagram-reverseproxy --type=LoadBalancer --name=publicreverseproxy --port 8080
+
+kubectl set image deployment udagram-frontend udagram-frontend=shine102/udagram-frontend:v2
+kubectl set image deployment udagram-frontend udagram-frontend=shine102/udagram-frontend:v1
+
+kubectl exec --stdin --tty backend-feed-68d5c9fdd6-dkg8c -- /bin/bash
