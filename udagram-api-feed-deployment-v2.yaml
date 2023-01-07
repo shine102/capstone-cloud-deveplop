@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-api-feed
+  name: udagram-api-feed-v2
   labels:
     app: udagram-api-feed
 spec:
@@ -9,16 +9,16 @@ spec:
   selector:
     matchLabels:
       app: udagram-api-feed
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: udagram-api-feed
-        version: v1
+        version: v2
     spec:
       containers:
       - name: udagram-api-feed
-        image: shine102/udagram-api-feed:v1
+        image: shine102/udagram-api-feed:v2
         imagePullPolicy: Always  
         resources:
           requests:

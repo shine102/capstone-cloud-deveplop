@@ -48,7 +48,7 @@ jobs:
         with:
           context: udagram-frontend
           push: true
-          tags: shine102/udagram-frontend:v2
+          tags: shine102/udagram-frontend:v1
       - 
         name: Build and push reverseproxy
         uses: docker/build-push-action@v2
