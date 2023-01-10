@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "udagram-api-feed"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/actions.blue-green: |
+      {
+        "type":"forward",
+        "forwardConfig":{
+          "targetGroups":[
+            {
+              "serviceName":"udagram-api-feed",
+              "servicePort":"80",
+              "weight":0
+            },
+            {
+              "serviceName":"udagram-api-feed-v2",
+              "servicePort":"80",
+              "weight":100
+            }
+          ]
+        }
+      }
+  labels:
+    app: udagram-api-feed
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: blue-green
+                port:
+                  name: use-annotation
